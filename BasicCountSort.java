@@ -1,14 +1,6 @@
 import java.util.Scanner;
 
 public class BasicCountSort {
-    
-    static int[] frequencyArray(int[] arr, int max) {
-        int[] freq = new int[max+1];
-        for(int i = 0; i<arr.length; i++) {
-            freq[arr[i]]++;
-        }
-        return freq;
-    }
 
     static void printArray(int[] arr) {
         for(int i : arr) {
@@ -28,10 +20,13 @@ public class BasicCountSort {
 
     static void countSort(int[] arr) {
         int max = findMax(arr);      //Find maximum element in array
-        int[] freq = frequencyArray(arr, max);
+        int[] count = new int[max+1];
+        for(int i = 0; i<arr.length; i++) {
+            count[arr[i]]++;       
+        }
         int k = 0;
-        for(int i = 0; i<freq.length; i++) {
-            for(int j = 0; j<freq[i]; j++) {
+        for(int i = 0; i<count.length; i++) {
+            for(int j = 0; j<count[i]; j++) {
                 arr[k++] = i;
             }
         }

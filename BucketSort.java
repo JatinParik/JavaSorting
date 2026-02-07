@@ -31,7 +31,7 @@ public class BucketSort {
             buckets[i] = new ArrayList<>();
         }
         for(int i = 0; i<arr.length; i++) {
-            int idx = (int)(arr[i]*10);
+            int idx = (int)(arr[i]*10);  
             buckets[idx].add(arr[i]);
         }
         for(int i = 0; i<buckets.length; i++) {

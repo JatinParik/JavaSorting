@@ -1,4 +1,4 @@
-public class SortAnArrayContainsOnlyZeroOneAndTwo {
+public class SortAnArrayContainsOnlyZeroOneAndTwo {   
     
     static void printArray(int[] arr) {
         for(int i : arr) {
@@ -39,7 +39,7 @@ public class SortAnArrayContainsOnlyZeroOneAndTwo {
     }
 
     //Another Approach
-    static void sort012_B(int[] arr) {
+    static void sort012_B(int[] arr) {   //Dutch National Flag Algorithm
         int low = 0, mid = 0, high = arr.length-1;
         while(mid<=high) {
         if(arr[mid]==0) swap(arr, mid++, low++);
